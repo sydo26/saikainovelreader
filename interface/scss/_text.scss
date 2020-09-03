@@ -1,0 +1,8 @@
+.text {
+    &-bold {
+        font-weight: bold !important;
+        & * {
+            @extend .text-bold;
+        }
+    }
+}

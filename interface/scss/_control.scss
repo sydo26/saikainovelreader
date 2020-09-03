@@ -1,0 +1,64 @@
+.control {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    max-height: 70px;
+    min-width: 70px;
+    margin: 0;
+    padding: 0;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    &-obj {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            margin-right: 15px;
+        }
+    }
+
+    &-text {
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px;
+
+        word-wrap: normal;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+        &-left {
+            @extend .control-text;
+            text-align: left;
+            justify-content: flex-start;
+        }
+        &-right {
+            @extend .control-text;
+            text-align: right;
+            justify-content: flex-end;
+        }
+        &-center {
+            @extend .control-text;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}
+
+// 15

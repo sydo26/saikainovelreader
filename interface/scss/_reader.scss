@@ -1,0 +1,72 @@
+.reader {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100% - 70px);
+    max-height: calc(100% - 70px);
+    min-height: calc(100% - 70px);
+    font-family: Roboto, sans-serif;
+    // overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 30px;
+    margin-right: 5px;
+    padding-top: 30px;
+    &-header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        
+
+        & > .title {
+            line-height: 40px;
+            font-weight: 500;
+            font-size: 32px;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 25px;
+        }
+
+        & > .subtitle {
+            line-height: 40px;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 25px;
+        }
+    }
+
+    &-body {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-right: 25px;
+
+        & > .text {
+            font-weight: 400;
+            line-height: 26px;
+            font-size: 18px;
+            text-align: justify;
+            word-wrap: break-word;
+            white-space: normal;
+            margin: 0;
+            margin-bottom: 35px;
+            margin-right: 25px;
+        }
+    }
+}
+
+@for $i from 1 through 20 {
+    .p#{$i}x > .text {
+        padding-left: $i * 10px;
+        padding-right: $i * 10px;
+        @media screen and (max-width: calc(100px * (#{$i}/2))){
+            padding-left: ($i/2) * 10px;
+            padding-right: ($i/2) * 10px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use "sass:map";
+
+$palettes: (
+    "1": ("texts": #0B0B0B, "backgrounds": #FAFAFA, "elements": #F0F0F0), 
+    "2": ("texts": #F9F4EC, "backgrounds": #131313, "elements": #171717),
+    "3": ("texts": #F4DBB5, "backgrounds": #181713, "elements": #0E0D04)
+);
+
+@each $name, $elements in $palettes {
+
+    .background-#{$name} {
+        background-color: map.get($elements, "backgrounds");
+    }
+
+    .reverse-background-#{$name} {
+        color: map.get($elements, "backgrounds");
+    }
+
+    .color-#{$name} {
+        color: map.get($elements, "texts");
+        & > i::before {
+            color: map.get($elements, "texts");
+        }
+    }
+
+    .reverse-color-#{$name} {
+        background-color: map.get($elements, "texts");
+    }
+
+    .element-background-#{$name} {
+        background-color: map.get($elements, "elements");
+    }
+
+    .button-list-#{$name} {
+        & > div {
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: map.get($elements, "elements");
+                border-radius: 5px
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: map.get($elements, "elements");
+            }
+        }
+    }
+
+    .reader-scroll-#{$name} {
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: map.get($elements, "elements");
+            border-radius: 5px
+        }
+        
+        
+        &::-webkit-scrollbar-thumb:hover {
+            background: map.get($elements, "elements");
+        }
+    }
+}

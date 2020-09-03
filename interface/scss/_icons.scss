@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import 'mixins';
+
+// @include font-face(IconFont, "../fonts/iconfont", 400, normal, ttf);
+
+.icon {
+    & {
+        font-family: IconFont;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        max-height: 24px;
+        font-size: 24px;
+    }
+
+    &-zoom-out::before { @extend .icon; content: unicode("e100"); }
+    &-zoom-in::before { @extend .icon; content: unicode("e101"); }
+    &-text-bold::before { @extend .icon; content: unicode("e102"); }
+    &-text-align-right::before { @extend .icon; content: unicode("e103"); }
+    &-text-align-left::before { @extend .icon; content: unicode("e104"); }
+    &-text-align-justify::before { @extend .icon; content: unicode("e105"); }
+    &-text-align-center::before { @extend .icon; content: unicode("e106"); }
+    &-printer::before { @extend .icon; content: unicode("e107"); }
+    &-padding::before { @extend .icon; content: unicode("e108"); }
+    &-minimize::before { @extend .icon; content: unicode("e109"); }
+    &-maximize::before { @extend .icon; content: unicode("e10a"); }
+    &-list::before { @extend .icon; content: unicode("e10b"); }
+    &-home::before { @extend .icon; content: unicode("e10c"); }
+    &-color::before { @extend .icon; content: unicode("e10d"); }
+    &-close::before { @extend .icon; content: unicode("e10e"); }
+    &-clear-style::before { @extend .icon; content: unicode("e10f"); }
+    &-chat::before { @extend .icon; content: unicode("e110"); }
+    &-bookmark-no::before { @extend .icon; content: unicode("e111"); }
+    &-bookmark-add::before { @extend .icon; content: unicode("e112"); }
+    &-bookmark::before { @extend .icon; content: unicode("e113"); }
+    &-arrow-right::before { @extend .icon; content: unicode("e114"); }
+    &-arrow-left::before { @extend .icon; content: unicode("e115"); }
+    
+    
+}

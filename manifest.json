@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "SaikarReader",
+    "description": "Disponibiliza uma melhor experiência em leituras na plataforma saikaiscan.com.br",
+    "version": "0.6",
+    "permissions": [
+        "unlimitedStorage",
+        "https://*/",
+        "http://*/"
+    ],
+    "web_accessible_resources": [
+        "interface/model.html",
+        "interface/chatfb.html",
+        "interface/css/style.css",
+        "interface/css/style.css.map",
+        "interface/fonts/iconfont.ttf"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://saikaiscan.com.br/novels/*/post/*"],
+          "js": ["script.js", "interface.js"],
+          "css": ["style.css"]
+        }
+    ]
+}

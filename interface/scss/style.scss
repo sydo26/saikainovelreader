@@ -1,0 +1,91 @@
+@import 'disqus';
+@import 'loading';
+@import 'palettes';
+@import 'icons';
+@import 'reader';
+@import 'control';
+@import 'button';
+@import 'options';
+@import 'notify';
+@import 'text';
+
+
+* {
+    box-sizing: border-box;
+}
+body, html {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.version {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    padding-left: 16.5px;
+    padding-right: 16.5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    font-size: 12px;
+    // font-style: italic;
+    font-weight: 400;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    
+}
+
+
+body {
+    &.maximize {
+        & .mhidden {
+            display: none !important;
+        }
+
+        & .mshow {
+            display: flex !important;
+        }
+
+        & .mbuttonabsolute {
+            display: flex !important;
+            position: absolute !important;
+            right: 0 !important;
+        }
+        & .notify {
+            right: 25px;
+        }
+    }
+
+    & .mbuttonabsolute {
+        display: none !important;
+    }
+    & .mshow {
+        display: none !important;
+    }
+
+
+}

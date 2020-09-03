@@ -1,0 +1,24 @@
+.options {
+    position: relative;
+    width: 75px;
+    max-width: 75px;
+    min-width: 75px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & > * {
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+    }
+}

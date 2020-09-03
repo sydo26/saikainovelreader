@@ -18,6 +18,10 @@ Melhorar a experiência de usuários para leitura de novel na saikaiscan.
 # Demonstração
 ![alt text](https://raw.githubusercontent.com/sydo26/saikainovelreader/master/exemplos/screen1.png)
 
+
+# Ícones utilizados
+[Evericons](http://www.evericons.com/)
+
 # Minhas redes sociais
 [Instagram](http://instagram.com.br/vroque379)
 [Linkedin](https://www.linkedin.com/in/sydoafk/)
